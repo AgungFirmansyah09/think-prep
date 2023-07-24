@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Digital - Inventory</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/Logo-ThinkPrep.png" alt="">
+        <span class="d-none d-lg-block"></span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="prosedure-thinkprep.html">
+          <i class="bi bi-grid"></i>
+          <span>Checklist Daily</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-book-half"></i><span>IKA (Intruksi Kerja)</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="IKA-scan-in.html">
+              <i class="bi bi-circle"></i><span>IKA SCAN IN</span>
+            </a>
+          </li>
+          <li>
+            <a href="IKA-scan-out.html">
+              <i class="bi bi-circle"></i><span>IKA SCAN OUT</span>
+            </a>
+          </li>
+          <li>
+            <a href="IKA-scan-in-Abnormal.html">
+              <i class="bi bi-circle"></i><span>IKA SCAN IN (ABNORMAL)</span>
+            </a>
+          </li>
+          <li>
+            <a href="IKA-scan-out-Abnormal.html">
+              <i class="bi bi-circle"></i><span>IKAN SCAN OUT (ABNORMAL)</span>
+            </a>
+          </li>
+         
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="prosedure-thinkprep.html">
+          <i class="bi bi-file-earmark-ppt"></i>
+          <span>Prosedure</span>
+        </a>
+      </li>
+      <!-- End Dashboard Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>CheckList</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Checklist</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Area 101 - 104 columns -->
+        <div class="col-lg-12">
+          <div class="row">
+
+            <!-- PREP 101 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 101</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1swDWsmvYrJcS5Qh2BDThKJJm6hE2ViOPCCUxhAXjdrE/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 101 Card -->
+
+            <!-- PREP 102 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 102</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1v7n8IJLhBSce-5IKFYvlPm0njlXJVol0YwagO85vsfQ/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 102 Card -->
+
+            <!-- PREP 103 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 103</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1B3N5nB4cviPCW1RMZd2mEJdiJ4Y_BlKGD99NDnDSCr8/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 103 Card -->
+
+            <!-- PREP 104 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 104</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1wsKSjottuBWwcaIOUujU4mk65JOBGcxxa-4bN4eHxFg/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 104 Card -->
+          </div>
+        </div><!-- End Area 101 - 104 columns --> 
+
+        <!-- Area 105 - 108 columns -->
+        <div class="col-lg-12">
+          <div class="row">
+
+            <!-- PREP 105 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 105</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/145vg3VwMS70fkTcyEAX9f58POYCKZrCOAg4n_LyMGE0/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 105 Card -->
+
+            <!-- PREP 106 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 106</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1Qm5aCL6-wgNzaAGnieAfWjIYB8DXvLhixRdkxWHKia0/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 106 Card -->
+
+            <!-- PREP 107 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 107</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1pWlwi45PK0cfSOli6wsfbiqs9kCCPAWe7SMkCFJJwoU/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 107 Card -->
+
+            <!-- PREP 108 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 108</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1rAnB0vfzI6RUlhga2KSzkuwDLLYUAH_wTc2_DjpEv14/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 108 Card -->
+          </div>
+        </div><!-- End Area 105 - 108 columns --> 
+
+
+        <!-- Area 101 - 104 columns -->
+        <div class="col-lg-12">
+          <div class="row">
+
+            <!-- PREP 109 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 109</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1abIkAC1tGn49w1reCNeY-hAw0ntlzfMWKtz7dIj0F_w/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 109 Card -->
+
+            <!-- PREP 110 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 110</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1H6nXhkIgpNw_DfzNkqErUqElYdUYkZcpP6PkKQlZuPU/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 110 Card -->
+
+            <!-- PREP 111 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 111</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1Xac9UBdr7c9WX8DsWW75iiIo9WY2afNw-AmvfrWnYm0/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 111 Card -->
+
+            <!-- PREP 112 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 112</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/19hqCJUkxkim1Vzzv6eTo8Yt6Ps99mwB7G1h_KjHYJEQ/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 112 Card -->
+          </div>
+        </div><!-- End Area 109 - 112 columns --> 
+
+        <!-- Area 101 - 104 columns -->
+        <div class="col-lg-12">
+          <div class="row">
+
+            <!-- PREP 113 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 113</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1Ki5lqA8X-Wt3le6iVS7vLC8g3gq2FDd5LBhZz3RBS8M/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 113 Card -->
+
+            <!-- PREP 114 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 114</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/16cDDLfGKdQ6oLw1cSECdgX2o9Ch0o6ThhzbD4TcNK5w/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 114 Card -->
+
+            <!-- PREP 115 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 115</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1YafDRab6G2PLw66WuXXxmwDjd-yY43iyMwHV73f4SMc/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 115 Card -->
+
+            <!-- PREP 116 Card -->
+            <div class="col-xxl-4 col-md-3">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">PREPARATION <span>| NCVS 116</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <a href="https://docs.google.com/spreadsheets/d/1AGLFPPZ0Aoe_Cjvn9J8DKJSjtV-YboTAaTgTdaK-IN4/edit?usp=sharing"><i class="bi bi-grid-1x2-fill"></i></a>
+                    </div>
+                    <div class="ps-3">
+                      <span class="text-success small pt-1 fw-bold">Daily</span> <span class="text-muted small pt-2 ps-1">Checklist</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End PREP 116 Card -->
+          </div>
+        </div><!-- End Area 115 - 116 columns -->       
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Digitalization Manufacturing</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Digitalization Manufacturing</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
